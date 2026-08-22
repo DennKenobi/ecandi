@@ -33,6 +33,12 @@ use either one, both, or a simpler version of either:
 Video and audio never depend on each other, so a missing piece on one side costs
 you nothing on the other.
 
+**What about the machine itself?** Less than you would think. One guest at
+1080p30 has been proven on a passively cooled four-core mini PC with 8 GB of
+memory, and a full six-guest show is comfortable on a desktop processor. The
+Introduction covers the measured numbers and what to turn off if you are short
+of headroom.
+
 ---
 
 ## 1. Install

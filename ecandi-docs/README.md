@@ -112,13 +112,56 @@ The **[Quick Start](QUICKSTART.md)** covers this properly, with the exact steps.
 
 ---
 
+## Will it run on my machine?
+
+There is no fixed specification, because the cost scales with how many guests
+you run and at what resolution. What follows is measured, not estimated.
+
+**One guest at 1080p30 runs on very little.** ECANDI has been proven on a
+passively cooled four-core mini PC (Intel N100 class, 8 GB of memory) with no
+NDI software of any kind installed on it: one guest, holding 29.9 fps, picked
+up cleanly by a receiver on another machine, picture smooth. If you want a
+single remote camera turned into an NDI source, a cheap small box is enough.
+
+**Two guests is about the ceiling for that class of machine.** On the same mini
+PC, a second guest took it to roughly 90 percent CPU with both feeds settling
+around 25 to 28 fps. The picture still looked good at the receiver, but there
+was no room left. Those numbers were measured with remote desktop software also
+running, which is expensive, so a box doing nothing else has somewhat more
+headroom than that suggests.
+
+**A full show wants a desktop processor.** On a ten-core desktop CPU, six guests
+at the normal mix cost roughly one and a half cores for all the video, about one
+core for all six audio feeds, and about half a core for the console with
+thumbnails on. That is comfortable. It is the machine ECANDI was developed and
+run on.
+
+Three things matter more than the processor model:
+
+- **Your guests should be remote.** That is the normal case anyway, and it
+  matters because a guest's browser does the encoding work on whatever machine
+  it runs on. Running guests' browsers on your capture machine is the most
+  expensive thing you can do to it.
+- **1080p30 is the tested setting**, and it is what the sample images here were
+  captured at. Dropping a guest to 720p costs roughly half as much. 60 fps works
+  for a single guest but has not been validated for a full six-guest show.
+- **The console is optional once the show is running.** Closing it leaves
+  everything streaming.
+
+**If you are short of headroom**, in the order that helps most: close the
+console after bring-up, turn the video thumbnails off, drop guests to 720p, and
+close other software that continuously encodes your screen, such as remote
+desktop or streaming tools.
+
+---
+
 ## Where to go next
 
 | If you want to | Read |
 |---|---|
 | Get one guest working, start to finish | **[Quick Start](QUICKSTART.md)** |
 | Understand every control, indicator, and failure state | **[Operator's Manual](MANUAL.md)** |
-| Know what's bundled and under what licence | `NOTICE.md`, beside the application |
+| Know what's bundled and under what license | `NOTICE.md`, beside the application |
 
 ---
 
