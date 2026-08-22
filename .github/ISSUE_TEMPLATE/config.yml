@@ -1,0 +1,12 @@
+blank_issues_enabled: true
+contact_links:
+  - name: VDO.Ninja itself
+    url: https://github.com/steveseguin/vdo.ninja/issues
+    about: >
+      If the problem is with the guest's camera, the room, or anything on the
+      vdo.ninja side rather than with ECANDI's capture, report it upstream.
+  - name: Electron Capture (upstream)
+    url: https://github.com/steveseguin/electroncapture/issues
+    about: >
+      ECANDI is a fork of Steve Seguin's Electron Capture. If the behaviour also
+      happens in stock Electron Capture, it belongs upstream.

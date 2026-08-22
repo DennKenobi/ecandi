@@ -1,0 +1,89 @@
+name: Bug report
+description: Something in ECANDI is not working
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. The questions below are the ones
+        that usually decide how quickly something can be tracked down. If you do not
+        know an answer, say so rather than guessing.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you got instead.
+      placeholder: |
+        I added three guests to a scene and pressed Start. Two came up in OBS and
+        the third stayed black, though its audio was fine.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: ECANDI version
+      description: The version of the installer or portable build you ran.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install-type
+    attributes:
+      label: How did you install it
+      options:
+        - Installer, just me
+        - Installer, all users
+        - Portable
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: Run `winver` if you are not sure.
+      placeholder: "Windows 11 24H2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ndi-tools
+    attributes:
+      label: Has NDI Tools or any other NDI software ever been installed on this machine?
+      description: >
+        ECANDI ships its own NDI runtime and is meant to work without any of that.
+        The answer tells us whether we are looking at a bundling problem or something
+        else entirely.
+      options:
+        - "No, never"
+        - "Yes, NDI Tools is installed"
+        - "Yes, some other NDI software"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: input
+    id: guests
+    attributes:
+      label: How many guests, and at what resolution
+      placeholder: "3 guests at 1080p30"
+
+  - type: textarea
+    id: log
+    attributes:
+      label: supervisor.log
+      description: >
+        Please attach or paste it. Installed builds write it to
+        Documents\ECANDI\supervisor.log; portable builds write it next to the scene
+        file. It names every player that ran, when, and why it stopped, and it is
+        usually the fastest route to an answer.
+      render: text
+
+  - type: textarea
+    id: anything-else
+    attributes:
+      label: Anything else
+      description: Screenshots, what you had already tried, anything that seemed relevant.
